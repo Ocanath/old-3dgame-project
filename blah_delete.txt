@@ -1,0 +1,10 @@
+	Pyramid pyrTest;
+	P3D V1; P3D V2; P3D V3; P3D V4;
+	V1.x = 0; V1.y = 5; V1.z = -5;
+	V2.x = -5; V2.y = -5; V2.z = -5;
+	V3.x = 5; V3.y = -5; V3.z = -5;
+	V4.x = 0; V4.y = 0; V4.z = 5;
+	initialize_pyramid(&pyrTest, V1, V2, V3, V4);
+	//MOVE TO MAIN LOOP
+	pyrTest.HW_B.H[2][3] = 65 + 5 * sin(40 * t);
+	update_pyramid(&pyrTest, &frame, &player, 255, 255, 255);
